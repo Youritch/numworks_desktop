@@ -1,0 +1,28 @@
+{
+  "name": "numworks_desktop",
+  "version": "1.0.0",
+  "description": "electron application with numworks emulator",
+  "main": "index.js",
+  "scripts": {
+    "run": "electron main.js",
+    "start": "electron-forge start",
+    "dev": "electronmon main.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youritch/numworks_desktop.git"
+  },
+  "keywords": [],
+  "author": "Youritch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Youritch/numworks_desktop/issues"
+  },
+  "homepage": "https://github.com/Youritch/numworks_desktop#readme",
+  "dependencies": {
+    "electron": "^26.1.0",
+    "electron-forge": "^5.2.4"
+  }
+}
