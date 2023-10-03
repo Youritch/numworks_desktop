@@ -56,7 +56,7 @@ const createWindow = () => {
 						return winDevTool.webContents.openDevTools();
 					},
 					label: "Dev Tools",
-					accelerator: process.platform === "darwin" ? "Alt+Cmd+I" : "Alt+Shift+I",
+					accelerator: process.platform === "darwin" ? "Alt+Cmd+I" : "Ctrl+Shift+I",
 				},
 				{
 					click: () => {
@@ -86,7 +86,7 @@ const createWindow = () => {
 						const x = Math.min(screen.getCursorScreenPoint().x, (width - winFocus.getSize()[0]));
 						winFocus.setPosition(x, 0);
 					},
-					accelerator: process.platform === "darwin" ? "Cmd+m" : "Alt+m",
+					accelerator: process.platform === "darwin" ? "Cmd+m" : "Ctrl+m",
 					label: "Move",
 				},
 				{
@@ -101,7 +101,7 @@ const createWindow = () => {
 						winFull.hide();
 						return;
 					},
-					accelerator: process.platform === "darwin" ? "Cmd+h" : "Alt+h",
+					accelerator: process.platform === "darwin" ? "Cmd+h" : "Ctrl+h",
 					label: "Hide",
 				},
 			],
@@ -113,7 +113,7 @@ const createWindow = () => {
 };
 app.whenReady().then(() => {
 	module.exports.wins = createWindow();
-	ipcMain.on("hide", (wins)=>{
+	ipcMain.on("hide", ()=>{
 		console.log(this.wins);
 		if (this.wins.winHide.isVisible()) {
 			this.wins.win.show();
